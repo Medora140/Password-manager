@@ -1,0 +1,7 @@
+$primary-color: black;
+$secondary-color: rgb(255, 174, 0);
+$text-color:rgb(219, 217, 217);
+
+@mixin transition-ease{
+    transition: all 0.3s ease-in-out;
+}
