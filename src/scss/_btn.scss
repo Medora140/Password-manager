@@ -1,24 +1,24 @@
 .btn {
-    height: 3rem;
-    color: $text-color;
-    border: 1px solid $secondary-color;
-    border-radius: 3rem;
-    outline: none;
-    padding: 0.5rem;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    background-color: darken($color: $secondary-color, $amount: 35%);
+  height: 3rem;
+  color: $text-color;
+  border: 1px solid $secondary-color;
+  border-radius: 3rem;
+  outline: none;
+  padding: 0.5rem;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: darken($color: $secondary-color, $amount: 35%);
 
-    &:hover {
-        font-weight: bold;
-    }
+  &:hover {
+    font-weight: bold;
+  }
 
-    &_design {
-        width: 50px;
-        height: 50px;
-        display: inline-block;
-        text-align:center;
-    }
+  &_design {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+  }
 }
