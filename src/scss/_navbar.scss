@@ -1,55 +1,65 @@
-﻿.nav {
-  min-height: 76px;
+@use "config" as *;
+
+.nav {
   display: flex;
+  min-height: 76px;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0 clamp(1rem, 5vw, 4.5rem);
-  background: #0b0d12;
   border-bottom: 1px solid #20242d;
-}
-.nav-logo {
-  color: #edf0f5;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 750;
-  letter-spacing: -0.06em;
-}
-.nav-logo .design {
-  color: #b2f36b;
-}
-.nav-bar {
-  display: flex;
-  align-items: center;
-  gap: clamp(1rem, 3vw, 2.25rem);
-  margin: 0;
-  padding: 0;
-}
-.nav-bar_i {
-  list-style: none;
-}
-.nav-bar_i a {
-  color: #a4aab5;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: color 0.18s ease;
-}
-.nav-bar_i a:hover,
-.nav-bar_i a:focus-visible {
-  color: #b2f36b;
-}
-@media (max-width: 480px) {
-  .nav {
+  background: $primary-color;
+
+  &-logo {
+    color: $text-color;
+    font-size: 1.5rem;
+    font-weight: 750;
+    letter-spacing: -0.06em;
+    text-decoration: none;
+
+    .design {
+      color: $secondary-color;
+    }
+  }
+
+  &-bar {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2.25rem);
+    margin: 0;
+    padding: 0;
+
+    &_i {
+      list-style: none;
+
+      a {
+        color: #a4aab5;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: color 0.18s ease;
+
+        &:hover,
+        &:focus-visible {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
     min-height: 66px;
     padding-inline: 1rem;
-  }
-  .nav-logo {
-    font-size: 1.3rem;
-  }
-  .nav-bar {
-    gap: 0.8rem;
-  }
-  .nav-bar_i a {
-    font-size: 0.8rem;
+
+    &-logo {
+      font-size: 1.3rem;
+    }
+
+    &-bar {
+      gap: 0.8rem;
+
+      &_i a {
+        font-size: 0.8rem;
+      }
+    }
   }
 }

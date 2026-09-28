@@ -1,13 +1,17 @@
-﻿.footer {
+@use "config" as *;
+
+.footer {
   padding: 1rem;
   border-top: 1px solid #20242d;
-  background: #0b0d12;
+  background: $primary-color;
   color: #737b89;
   text-align: center;
   font-size: 0.72rem;
-}
-.foot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  .foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
 }

@@ -14,8 +14,8 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  color: #edf0f5;
-  background: #0b0d12;
+  color: $text-color;
+  background: $primary-color;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@
 html {
   min-width: 320px;
   min-height: 100%;
-  background: #0b0d12;
+  background: $primary-color;
 }
 body {
   min-width: 320px;
@@ -51,10 +51,11 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.body {
-  flex: 1;
-  background: #0b0d12;
+
+  .body {
+    flex: 1;
+    background: $primary-color;
+  }
 }
 .sr-only {
   position: absolute;
