@@ -1,7 +1,13 @@
-$primary-color: black;
-$secondary-color: rgb(255, 174, 0);
-$text-color: rgb(219, 217, 217);
-
+﻿$primary-color: #0b0d12;
+$secondary-color: #b2f36b;
+$text-color: #edf0f5;
+$muted-color: #89909e;
+$surface-color: #13161e;
+$border-color: #282d38;
 @mixin transition-ease {
-  transition: all 0.3s ease-in-out;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
 }

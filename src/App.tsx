@@ -1,14 +1,14 @@
-import "./scss/main.scss";
+﻿import "./scss/main.scss";
 import Navbar from "./components/Navbar";
 
 import Footer from "./components/Footer";
-import Manager from "./components/Manager";
+import PasswordManager from "./features/passwords/PasswordManager";
 function App() {
   return (
     <>
       <div className="body">
         <Navbar />
-        <Manager />
+        <PasswordManager />
       </div>
       <Footer />
     </>
@@ -16,3 +16,4 @@ function App() {
 }
 
 export default App;
+

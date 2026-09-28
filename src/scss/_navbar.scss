@@ -1,44 +1,55 @@
-.nav {
+﻿.nav {
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  height: 5rem;
-  background: linear-gradient(to top right, $secondary-color, rgb(11, 11, 10));
-  position: sticky;
-  z-index: 1;
-
-  &-logo {
-    font-weight: bolder;
-    font-size: xx-large;
-    height: 2rem;
-    color: $primary-color;
-    .design {
-      color: $text-color;
-    }
+  gap: 1rem;
+  padding: 0 clamp(1rem, 5vw, 4.5rem);
+  background: #0b0d12;
+  border-bottom: 1px solid #20242d;
+}
+.nav-logo {
+  color: #edf0f5;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.06em;
+}
+.nav-logo .design {
+  color: #b2f36b;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.25rem);
+  margin: 0;
+  padding: 0;
+}
+.nav-bar_i {
+  list-style: none;
+}
+.nav-bar_i a {
+  color: #a4aab5;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+.nav-bar_i a:hover,
+.nav-bar_i a:focus-visible {
+  color: #b2f36b;
+}
+@media (max-width: 480px) {
+  .nav {
+    min-height: 66px;
+    padding-inline: 1rem;
   }
-
-  &-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    height: 2rem;
-
-    &_i {
-      list-style: none;
-      height: 1rem;
-
-      a {
-        text-decoration: none;
-      }
-
-      &:hover {
-        a {
-          font-weight: bolder;
-          @include transition-ease;
-        }
-      }
-    }
+  .nav-logo {
+    font-size: 1.3rem;
+  }
+  .nav-bar {
+    gap: 0.8rem;
+  }
+  .nav-bar_i a {
+    font-size: 0.8rem;
   }
 }
